@@ -1,0 +1,416 @@
+<div class="panel-demo bg-surface font-body-md text-on-surface antialiased">
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low border-r border-surface-container-highest z-50 flex flex-col justify-between py-6"><div class="px-6"><div class="flex items-center gap-3 pb-6 border-b border-surface-container-highest"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Voces &amp; Manos</span></div><div class="mt-6"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider px-2">Gestión de Campañas</span><nav class="mt-2 space-y-1" data-active-classes="bg-surface-container-high text-primary font-bold"><a aria-current="page" class="flex items-center gap-3 px-3 py-2 rounded-lg transition-all bg-surface-container-high text-primary font-bold" data-path="mi-panel" href="/mi-panel"><span class="material-symbols-outlined text-lg">dashboard</span>Mi Resumen</a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-ui-interactive text-ui-interactive" data-path="mis-iniciativas" href="#actividad-local"><span class="material-symbols-outlined text-lg">campaign</span>Mis Campañas</a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-ui-interactive text-ui-interactive" data-path="carga-de-comprobantes" href="#comprobantes-locales"><span class="material-symbols-outlined text-lg">receipt_long</span>Comprobantes y Boletas</a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-ui-interactive text-ui-interactive" data-path="bitacora-de-campo" href="#bitacora-local"><span class="material-symbols-outlined text-lg">edit_note</span>Bitácora de Campo</a></nav></div><div class="mt-8"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider px-2">Auditoría &amp; Respaldo</span><nav class="mt-2 space-y-1" data-active-classes="bg-surface-container-high text-secondary font-bold"><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-ui-interactive text-ui-interactive" data-path="verificacion-identidad" href="/informacion/criterios-de-verificacion-dni"><span class="material-symbols-outlined text-lg">badge</span>Validación DNI/RUC</a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-ui-interactive text-ui-interactive" data-path="rendicion-de-cuentas" href="#actividad-local"><span class="material-symbols-outlined text-lg">account_balance</span>Libro Contable</a></nav></div></div><div class="px-6 pt-4 border-t border-surface-container-highest"><div class="flex items-center gap-3 p-2 rounded-lg bg-surface-container"><img alt="Profile" class="w-9 h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5k9rBhYDpymCVse99eWoXAX8M6lK0qGGdRt8rSHO6MfCrH8NOM_LuJWzz_z-RMvsWFVHLOT66KWwAqZo1T09OW3Ov3FNcShD7QX4JGaFIRZrM6QfwNE_l1CRU1oMTYeaqX7OeihHid6llMRqLgwJvd4LXO6aMmGuhMD_gL8gIphPF8PLHgf8HO3f4HQT3IEVluvWZPMWST0Wa4ca-_EIiHNDobWVkwLX-NYOCt28"/><div class="flex-1 min-w-0"><p class="font-ui-interactive text-ui-interactive text-on-surface truncate">Comité de Agua Lurín</p><p class="font-label-caps text-label-caps text-secondary uppercase">Líder Verificado</p></div></div><a class="mt-3 flex items-center justify-center gap-2 w-full py-2 text-on-surface-variant hover:text-primary font-ui-interactive text-ui-interactive text-sm transition-colors" data-path="explorar-historias" href="/"><span class="material-symbols-outlined text-base">arrow_back</span>Volver al Portal</a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-md border-b border-surface-container-highest z-40 flex items-center justify-between px-8"><div class="flex items-center gap-2"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Entorno Auditado</span><span class="text-surface-container-highest">/</span><span class="font-ui-interactive text-ui-interactive text-on-surface">Panel de Organización Territorial</span></div><div class="flex items-center gap-4"><a class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-ui-interactive text-ui-interactive transition-colors" data-path="crear-campana" href="/crear-campana"><span class="material-symbols-outlined text-base">add</span>Nueva Iniciativa</a><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5k9rBhYDpymCVse99eWoXAX8M6lK0qGGdRt8rSHO6MfCrH8NOM_LuJWzz_z-RMvsWFVHLOT66KWwAqZo1T09OW3Ov3FNcShD7QX4JGaFIRZrM6QfwNE_l1CRU1oMTYeaqX7OeihHid6llMRqLgwJvd4LXO6aMmGuhMD_gL8gIphPF8PLHgf8HO3f4HQT3IEVluvWZPMWST0Wa4ca-_EIiHNDobWVkwLX-NYOCt28"/><span class="absolute bottom-0 right-0 block w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Content Area Wrapper -->
+<div class="px-8 py-8 space-y-8 max-w-[1400px] mx-auto w-full">
+<section id="actividad-local" class="rounded-xl bg-surface-container-lowest p-6 shadow-sm space-y-5">
+  <h2 class="font-headline-md text-headline-md">Actividad de demostración en este navegador</h2>
+  <label for="active-campaign" class="block font-ui-interactive">Campaña activa para rendiciones y novedades</label>
+  <select id="active-campaign" class="w-full rounded-lg bg-surface-container-low p-3" [value]="selectedCampaignId()" (change)="selectCampaign($event)">
+    @for (campaign of store.campaigns(); track campaign.id) { <option [value]="campaign.id">{{ campaign.title }}</option> }
+  </select>
+  @if (mode === 'beneficiaria') {
+    <h3 class="font-ui-interactive">Campañas locales</h3>
+    @for (campaign of store.campaigns(); track campaign.id) {
+      <div class="flex flex-wrap justify-between gap-2 rounded-lg bg-surface-container-low p-3">
+        <a class="text-primary underline" [href]="campaign.id === 'anta' ? '/historia' : '/historia/' + campaign.id">{{ campaign.title }}</a>
+        <span>S/ {{ campaign.raised.toFixed(2) }} / S/ {{ campaign.goal.toFixed(2) }}</span>
+      </div>
+    }
+    <h3 class="font-ui-interactive">Comprobantes locales</h3>
+    @for (item of selectedExpenses; track item.id) {
+      <div class="rounded-lg bg-surface-container-low p-3"><strong>S/ {{ item.amount.toFixed(2) }}</strong> · {{ item.description }} · {{ item.category }}
+        <button type="button" class="ml-3 text-primary underline" (click)="downloadData(item.fileName, item.fileData)">Descargar {{ item.fileName }}</button>
+      </div>
+    } @empty { <p>No hay comprobantes locales.</p> }
+    <h3 class="font-ui-interactive">Actualizaciones locales</h3>
+    @for (post of selectedPosts; track post.id) {
+      <div class="rounded-lg bg-surface-container-low p-3"><span [innerHTML]="formatPostText(post.message)"></span>
+        @if (post.attachment; as attachment) { <button type="button" class="ml-3 text-primary underline" (click)="downloadData(attachment.name, attachment.data)">Descargar {{ attachment.name }}</button> }
+      </div>
+    } @empty { <p>No hay actualizaciones locales.</p> }
+  } @else {
+    <h3 class="font-ui-interactive">Mis donaciones simuladas</h3>
+    @for (donation of store.donations(); track donation.id) {
+      <div class="rounded-lg bg-surface-container-low p-3">
+        <a class="text-primary underline" [href]="'/comprobante/' + donation.id">{{ store.campaign(donation.campaignId)?.title }}</a>
+        · S/ {{ donation.amount.toFixed(2) }} · {{ donation.method }}
+        @if (!store.thanks().includes(donation.id)) { <button type="button" class="ml-3 text-primary underline" (click)="thank(donation.id)">Agradecer</button> }
+        @else { <span class="ml-3 text-secondary">Agradecimiento guardado</span> }
+      </div>
+    } @empty { <p>Aún no has realizado donaciones simuladas.</p> }
+  }
+</section>
+<!-- Top Profile & Mode Toggle Banner -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+<div class="space-y-1.5">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-on-surface">Panel de demostración</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps tracking-wider">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+            Identidad no verificada
+          </span>
+</div>
+<p class="font-body-md text-body-md text-tertiary">
+          Campaña activa: <span class="text-on-surface font-ui-interactive text-ui-interactive">{{ store.campaign(selectedCampaignId())?.title }}</span>
+</p>
+</div>
+<!-- Mode Switcher -->
+<div class="inline-flex p-1 rounded-lg bg-surface-container self-start md:self-auto">
+<button (click)="setMode('beneficiaria')" class="px-4 py-2 rounded-lg bg-surface-container-lowest text-primary font-ui-interactive text-ui-interactive shadow-sm transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-base">supervisor_account</span>
+          Modo Beneficiaria / Mis Causas
+        </button>
+<button (click)="setMode('donante')" class="px-4 py-2 rounded-lg text-tertiary hover:text-on-surface font-ui-interactive text-ui-interactive transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-base">favorite</span>
+          Modo Donante ({{ store.donations().length }} aportes)
+        </button>
+</div>
+</div>
+<!-- Metric Summary Cards Grid (4 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+<!-- Card 1: Recaudado Total -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Recaudado Total</span>
+<span class="p-1.5 rounded-md bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-lg">payments</span>
+</span>
+</div>
+<div class="my-4">
+<div class="font-metric-currency text-metric-currency text-on-surface">S/ {{ store.campaign(selectedCampaignId())?.raised?.toLocaleString('es-PE') }}</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold">{{ campaignProgress }}%</span>
+<span class="font-body-sm text-body-sm text-tertiary">de S/ {{ store.campaign(selectedCampaignId())?.goal?.toLocaleString('es-PE') }} meta</span>
+</div>
+</div>
+<!-- Mini Sparkline inline SVG -->
+<div class="w-full pt-2">
+<svg class="w-full h-8 text-secondary" fill="none" viewbox="0 0 100 24">
+<path d="M0 20 L15 18 L30 14 L45 16 L60 9 L75 11 L90 4 L100 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<polygon fill="currentColor" fill-opacity="0.08" points="0,20 15,18 30,14 45,16 60,9 75,11 90,4 100,2 100,24 0,24"></polygon>
+</svg>
+</div>
+</div>
+<!-- Card 2: Saldo Disponible para Retiro -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Saldo para Retiro</span>
+<span class="p-1.5 rounded-md bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+</span>
+</div>
+<div class="my-4">
+<div class="font-metric-currency text-metric-currency text-primary">S/ {{ available.toFixed(2) }}</div>
+<div class="font-body-sm text-body-sm text-tertiary mt-1">Saldo simulado local, sin depósitos reales</div>
+</div>
+<button (click)="requestWithdrawal()" class="w-full py-2.5 px-3 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-ui-interactive text-ui-interactive transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base">outbox</span>
+          Solicitar Desembolso
+        </button>
+@if (withdrawalOpen) {
+  <div class="mt-3 space-y-3">
+    <label for="withdraw-amount" class="block font-ui-interactive">Monto simulado a solicitar</label>
+    <input #withdrawAmount id="withdraw-amount" type="number" min="0.01" step="0.01" [max]="available" class="w-full rounded-lg bg-surface-container-low p-2">
+    <div class="flex gap-3">
+      <button type="button" class="text-primary underline" (click)="submitWithdrawal(withdrawAmount.value)">Confirmar solicitud</button>
+      <button type="button" class="text-on-surface-variant underline" (click)="withdrawalOpen = false">Cancelar</button>
+    </div>
+  </div>
+}
+</div>
+<!-- Card 3: Fondos Rendidos con Boletas -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Fondos Rendidos</span>
+<span class="p-1.5 rounded-md bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+</span>
+</div>
+<div class="my-4">
+<div class="font-metric-currency text-metric-currency text-secondary">S/ {{ expenseTotal.toFixed(2) }}</div>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-secondary mt-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            Registrado localmente, sin auditoría
+          </div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Card 4: Donantes Directos -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Comunidad Donante</span>
+<span class="p-1.5 rounded-md bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-lg">group</span>
+</span>
+</div>
+<div class="my-4">
+<div class="font-metric-currency text-metric-currency text-on-surface">{{ donationCount }}</div>
+<div class="font-body-sm text-body-sm text-tertiary mt-1">Donaciones simuladas locales</div>
+</div>
+<button type="button" (click)="downloadDirectory()" class="w-full py-2 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-ui-interactive text-ui-interactive transition-colors flex items-center justify-center gap-1.5 text-center">
+<span class="material-symbols-outlined text-base">download</span>
+          Descargar Directorio
+        </button>
+</div>
+</div>
+<!-- Main Content 2-Column Split: 60% / 40% -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column (60% ~ 7 cols): Bitácora & Comprobantes -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Module: Subir Comprobante / Boleta de Gasto -->
+<div id="comprobantes-locales" class="bg-surface-container-lowest p-6 rounded-xl shadow-sm space-y-6">
+<div class="flex items-center justify-between pb-4 bg-surface-container-lowest">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Transparencia en Campo</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Subir Comprobante de Gasto</h2>
+</div>
+<span class="material-symbols-outlined text-tertiary text-2xl">receipt_long</span>
+</div>
+<!-- Drag and Drop Zone -->
+<div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors text-center flex flex-col items-center justify-center space-y-3">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">cloud_upload</span>
+</div>
+<div>
+<p class="font-ui-lead text-ui-lead text-on-surface">Selecciona una factura, boleta o recibo de muestra</p>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Formatos válidos: PDF, JPG, PNG (SUNAT o recibo comunal físico legible)</p>
+</div>
+<button (click)="receiptUpload.click()" class="mt-2 px-4 py-1.5 rounded-lg bg-surface-container-highest text-on-surface font-ui-interactive text-ui-interactive text-xs hover:bg-surface-variant transition-colors" type="button">
+              Explorar Archivos
+            </button>
+<input #receiptUpload type="file" accept="image/jpeg,image/png,application/pdf" class="hidden" (change)="selectFile($event, 'receipt')">
+<p class="font-body-sm text-body-sm">Hasta 1 MB. Solo se guarda localmente; no uses documentos sensibles.</p>
+@if (receiptFile(); as file) { <p>{{ file.name }} <button type="button" class="text-primary underline" (click)="receiptFile.set(null)">Quitar</button></p> }
+</div>
+<!-- Form Fields -->
+<form class="space-y-4" (submit)="submitExpense($event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1.5">Monto justificado (S/)</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 font-ui-interactive text-tertiary">S/</span>
+<input name="amount" class="w-full pl-9 pr-3 py-2 bg-surface-container-low rounded-lg font-ui-interactive text-ui-interactive text-on-surface placeholder:text-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="0.00" step="0.01" type="number"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1.5">Rubro del Presupuesto</label>
+<select name="category" class="w-full px-3 py-2 bg-surface-container-low rounded-lg font-ui-interactive text-ui-interactive text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all">
+<option value="">Seleccionar rubro...</option>
+<option value="materiales">Materiales de Construcción &amp; Techado</option>
+<option value="mano-obra">Jornales y Mano de Obra Local</option>
+<option value="transporte">Flete y Traslado de Madera</option>
+<option value="herramientas">Herramientas e Indumentaria</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1.5">Breve explicación comunitaria de la compra</label>
+<textarea name="description" class="w-full p-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Ej: Adquisición de 40 calaminas galvanizadas compradas a Ferretería Andina para proteger el telar principal..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-body-sm text-body-sm text-tertiary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">lock</span>
+                Auditoría pública comunitaria en 24h
+              </span>
+<button class="px-5 py-2.5 rounded-lg bg-primary text-on-primary font-ui-interactive text-ui-interactive hover:bg-primary-container transition-all flex items-center gap-2" type="submit">
+<span class="material-symbols-outlined text-base">send</span>
+                Publicar para Auditoría Ciudadana
+              </button>
+</div>
+</form>
+</div>
+<!-- Recent Receipts Feed (Bitácora de Rendición) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Comprobantes Recientes Auditados</h3>
+<span class="font-label-caps text-label-caps text-secondary uppercase bg-secondary-container px-2 py-0.5 rounded">Al Día</span>
+</div>
+<!-- Feed Item 1 -->
+<div class="p-4 rounded-lg bg-surface-container-low space-y-3">
+<div class="flex flex-wrap items-start justify-between gap-4">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-caps text-label-caps bg-surface-container-highest text-tertiary px-2 py-0.5 rounded">Comprobante #04</span>
+<span class="font-body-sm text-body-sm text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                    Aprobado por Auditoría el 24 Octubre
+                  </span>
+</div>
+<h4 class="font-ui-lead text-ui-lead text-on-surface font-semibold">
+                  Compra de 12 vigas de eucalipto en Maderera El Sol - Factura F001-00293
+                </h4>
+<p class="font-body-sm text-body-sm text-tertiary">
+                  Vigas tratadas para el soporte del techo del taller comunal en Chinchero. Verificado por el veedor territorial de Urubamba.
+                </p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-metric-currency text-headline-sm text-on-surface block">S/ 4,800.00</span>
+<span class="font-label-caps text-label-caps text-tertiary">RUC 20491029381</span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary font-ui-interactive text-ui-interactive text-xs">
+<span class="material-symbols-outlined text-sm">attachment</span>
+<span>Factura de muestra (sin archivo)</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Veedor: Ing. Juan Mendoza</span>
+</div>
+</div>
+<!-- Feed Item 2 -->
+<div class="p-4 rounded-lg bg-surface-container-low space-y-3">
+<div class="flex flex-wrap items-start justify-between gap-4">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-caps text-label-caps bg-surface-container-highest text-tertiary px-2 py-0.5 rounded">Comprobante #03</span>
+<span class="font-body-sm text-body-sm text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                    Aprobado por Auditoría el 18 Octubre
+                  </span>
+</div>
+<h4 class="font-ui-lead text-ui-lead text-on-surface font-semibold">
+                  Anticipo carpintería artesanal - Recibo RH E001-12
+                </h4>
+<p class="font-body-sm text-body-sm text-tertiary">
+                  Diseño de 3 bastidores tradicionales de pie para el telar de cintura. Maestro artesano Teófilo Huamán.
+                </p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-metric-currency text-headline-sm text-on-surface block">S/ 1,800.00</span>
+<span class="font-label-caps text-label-caps text-tertiary">RUC 10239481902</span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary font-ui-interactive text-ui-interactive text-xs">
+<span class="material-symbols-outlined text-sm">attachment</span>
+<span>Recibo de muestra (sin archivo)</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Veedor: Lic. Rosa Ccallo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (40% ~ 5 cols): Rich Text Composer & Live Donations Wall -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Mini-Composer: Publicar Actualización para Donantes -->
+<div id="bitacora-local" class="bg-surface-container-lowest p-6 rounded-xl shadow-sm space-y-4">
+<div class="flex items-center gap-2.5">
+<span class="p-1.5 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-xl">campaign</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Voz Comunitaria</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Boletín directo a los 142 donantes de la causa</p>
+</div>
+</div>
+<!-- Rich Text Area -->
+<div class="space-y-2">
+<div class="flex items-center gap-1 p-1 bg-surface-container-low rounded-lg text-tertiary">
+<button type="button" (click)="formatPost('bold')" class="p-1.5 rounded hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="Negrita">
+<span class="material-symbols-outlined text-sm">format_bold</span>
+</button>
+<button type="button" (click)="formatPost('italic')" class="p-1.5 rounded hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="Cursiva">
+<span class="material-symbols-outlined text-sm">format_italic</span>
+</button>
+<button type="button" (click)="formatPost('list')" class="p-1.5 rounded hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="Lista">
+<span class="material-symbols-outlined text-sm">format_list_bulleted</span>
+</button>
+<div class="w-px h-4 bg-surface-variant mx-1"></div>
+<button type="button" (click)="postUpload.click()" class="p-1.5 rounded hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="Adjuntar foto">
+<span class="material-symbols-outlined text-sm">add_photo_alternate</span>
+</button>
+<input #postUpload type="file" accept="image/jpeg,image/png" class="hidden" (change)="selectFile($event, 'post')">
+</div>
+<textarea id="post-editor" class="w-full p-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Escribe un mensaje de agradecimiento o fotos del avance del taller para los 142 donantes..." rows="4"></textarea>
+</div>
+<!-- Photo Attachment Placeholder Preview -->
+@if (postFile(); as file) {
+<div class="flex items-center gap-3 p-2 bg-surface-container-low rounded-lg">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0" [src]="file.data" alt="Foto adjunta">
+<div class="min-w-0 flex-1">
+<p class="font-ui-interactive text-ui-interactive text-xs truncate">{{ file.name }}</p>
+<p class="font-body-sm text-body-sm text-xs text-tertiary">Listo para adjuntar</p>
+</div>
+<button type="button" (click)="postFile.set(null)" class="p-1 text-tertiary hover:text-error transition-colors">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+}
+<button type="button" (click)="publishPost()" class="w-full py-2.5 px-4 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-ui-interactive text-ui-interactive transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base">forward_to_inbox</span>
+            Enviar Boletín a Donantes
+          </button>
+</div>
+<!-- Muro de Agradecimiento & Donaciones en Tiempo Real -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">favorite</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Muro de Donantes</h3>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary">En Tiempo Real</span>
+</div>
+<!-- Community Field Photo -->
+<div class="relative rounded-lg overflow-hidden h-36 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait of Quechua weaving cooperative members in Chinchero Cusco wearing traditional red lliclla and smiling warmly in front of their stone adobe community hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlekwZ7wg9Tgz_ieXaVQ_6EAvKMq2PIF0gXFULUoTtNS8MCRzcMSSid22iTFyI1xJDNm4M1p0rUOSmFbJDng1fTgiqPo6-sj0zw1nXiBPppaTrszvmPuF10qYenRFzRUxyeyfVTf7kQjb0uFjFd8Uy9mB8u8j7OTztFfwaFT5URsNNaS1hn7ObWXLKL8lEAYP4TbMkuIedMSKanyrz5QPVSk2uq5ck5xnM1qeeXdw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-3">
+<span class="font-story-pullquote text-on-primary italic text-sm">"Cada sol entregado se traduce en dignidad y trabajo para nuestras familias."</span>
+</div>
+</div>
+<!-- Donations List -->
+<div class="space-y-3.5">
+<!-- Donation 1 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low space-y-1.5 hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-ui-interactive text-ui-interactive text-on-surface">María Elena R.</span>
+<span class="font-metric-currency text-base text-secondary font-bold">S/ 100.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary italic">"Mucha fuerza para todas las hermanas tejedoras."</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-tertiary">Hace 15 minutos</span>
+<button type="button" (click)="thank('ejemplo-maria')" class="font-ui-interactive text-ui-interactive text-xs text-primary hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">reply</span>
+                  Agradecer
+                </button>
+</div>
+</div>
+<!-- Donation 2 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low space-y-1.5 hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-ui-interactive text-ui-interactive text-tertiary">Aporte Solidario Anónimo</span>
+<span class="font-metric-currency text-base text-secondary font-bold">S/ 50.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Aporte libre sin nota pública</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-tertiary">Hace 1 hora</span>
+<span class="font-label-caps text-label-caps text-tertiary">Vía Yape QR</span>
+</div>
+</div>
+<!-- Donation 3 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low space-y-1.5 hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-ui-interactive text-ui-interactive text-on-surface">Carlos T.</span>
+<span class="font-metric-currency text-base text-secondary font-bold">S/ 250.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary italic">"Admiro su trabajo artesanal. Saludos desde Arequipa."</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-tertiary">Hace 3 horas</span>
+<button type="button" (click)="thank('ejemplo-carlos')" class="font-ui-interactive text-ui-interactive text-xs text-primary hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">reply</span>
+                  Agradecer
+                </button>
+</div>
+</div>
+</div>
+<div class="pt-2 text-center">
+<a class="font-ui-interactive text-ui-interactive text-xs text-primary hover:underline" href="#actividad-local" (click)="setMode('donante')">
+              Ver las 142 donaciones del registro contable →
+            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+</div>

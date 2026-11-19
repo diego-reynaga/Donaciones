@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { margin: 0; padding: 0; }
+body { overscroll-behavior: none; }
+main > :first-child { margin-top: 0 !important; }
+main > :last-child { margin-bottom: 0 !important; }
+::-webkit-scrollbar { display: none; }
+
+@media (max-width: 767px) {
+  .panel-demo > aside { position: relative; width: auto; height: auto; }
+  .panel-demo > div { padding-left: 0; }
+  .panel-demo > div > header { position: static; height: auto; padding: 1rem; flex-wrap: wrap; gap: 1rem; }
+  .panel-demo > div > main { padding-top: 0; }
+}
