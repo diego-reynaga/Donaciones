@@ -5,39 +5,6 @@ import { DemoStore, isValidAmount } from './demo-store';
 import { downloadBlob, downloadDemoFile } from './demo-download';
 import { formatDemoPost } from './demo-format';
 
-@Component({ selector: 'app-explorar', templateUrl: './explorar.html' })
-export class Explorar {
-  readonly store = inject(DemoStore);
-  filter = 'Todas';
-  readonly filters = ['Todas', 'Salud Crítica', 'Vivienda y Reconstrucción', 'Educación Comunitaria', 'Emergencias Climáticas'];
-
-  matches(id: string): boolean {
-    const campaign = this.store.campaign(id);
-    return !!campaign && (this.filter === 'Todas' || campaign.category === this.filter);
-  }
-
-  count(category: string): number {
-    return this.store.campaigns().filter((campaign) => category === 'Todas' || campaign.category === category).length;
-  }
-
-  format(amount: number): string {
-    return amount.toLocaleString('es-PE', { maximumFractionDigits: 2 });
-  }
-
-  raised(id: string): number {
-    return this.store.campaign(id)?.raised ?? 0;
-  }
-
-  percent(id: string): number {
-    const campaign = this.store.campaign(id);
-    return campaign ? Math.min(100, Math.round(campaign.raised / campaign.goal * 100)) : 0;
-  }
-
-  donorCount(id: string, initial: number): number {
-    return initial + this.store.donations().filter((donation) => donation.campaignId === id).length;
-  }
-}
-
 @Component({ selector: 'app-panel', templateUrl: './panel.html' })
 export class Panel {
   readonly store = inject(DemoStore);
@@ -275,7 +242,7 @@ export class Historia {
   }
 }
 
-@Component({ selector: 'app-checkout', imports: [FormsModule], templateUrl: './checkout.html' })
+@Component({ selector: 'app-checkout', standalone: true, imports: [FormsModule], templateUrl: './checkout.html', styleUrl: './checkout.css' })
 export class Checkout {
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);

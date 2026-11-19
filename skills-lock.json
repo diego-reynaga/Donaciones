@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "skills": {
+    "cinematic-ui": {
+      "source": "akseolabs-seo/cinematic-ui",
+      "commit": "1052c2cead980a9f8a0f219381373910ceedbc30",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "c4cfbb013c5de157226a6c931ad0aa57046d43a0f06155db47c2c404c08313d9"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "83485963700bcf11d5bf78118facb301676b69d918fee2e45a95e7f1a2840f6c"
+    }
+  }
+}

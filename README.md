@@ -14,6 +14,14 @@ Las imágenes y fuentes del diseño se cargan desde servicios externos. Algunas
 imágenes originales de Stitch, incluido el logotipo, requieren permisos y pueden
 no estar disponibles fuera de la cuenta que las creó.
 
+La portada usa GSAP y Lenis para movimientos sutiles; con la preferencia de
+movimiento reducido se muestra sin esas animaciones. Sus filtros y montos
+reflejan los datos de demostración almacenados en el navegador.
+
+Los colores globales se definen en `src/styles.css` mediante variables `--vm-*`
+y se utilizan también en el tema de Tailwind. Outfit se usa para titulares y
+Source Sans 3 para texto y controles; ambas fuentes tienen alternativas locales.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.7.
 
 ## Development server

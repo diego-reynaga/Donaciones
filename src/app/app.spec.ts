@@ -1,11 +1,12 @@
 import { Type } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { Router, provideRouter } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 import { vi } from 'vitest';
 import { routes } from './app.routes';
 import { DemoStore } from './demo-store';
-import { Checkout, Crear, Explorar, Historia, Panel } from './screens';
+import { Explorar } from './explorar';
+import { Checkout, Crear, Historia, Panel } from './screens';
 
 describe('Flujos de demostración', () => {
   beforeEach(() => {
@@ -37,6 +38,32 @@ describe('Flujos de demostración', () => {
     const harness = await RouterTestingHarness.create();
     await harness.navigateByUrl(`/informacion/${topic}`);
     expect(harness.routeNativeElement?.textContent).toContain(expected);
+  });
+
+  it('filtra las historias de ejemplo y conserva acceso a la destacada', async () => {
+    const fixture = TestBed.createComponent(Explorar);
+    await fixture.whenStable();
+    const page = fixture.nativeElement as HTMLElement;
+    const button = [...page.querySelectorAll<HTMLButtonElement>('.filters button')]
+      .find((item) => item.textContent?.includes('Vivienda y Reconstrucción'))!;
+    button.click();
+    await fixture.whenStable();
+    expect(button.getAttribute('aria-pressed')).toBe('true');
+    expect(page.querySelectorAll('.story-card')).toHaveLength(1);
+    expect(page.querySelector('.story-card a')?.getAttribute('href')).toBe('/historia');
+    expect(page.querySelector('.story-card')?.textContent).toContain('Anta');
+  });
+
+  it('actualiza el avance destacado al registrar un aporte simulado', async () => {
+    const fixture = TestBed.createComponent(Explorar);
+    await fixture.whenStable();
+    TestBed.inject(DemoStore).addDonation({
+      campaignId: 'anta', amount: 150, tip: 0, method: 'Tarjeta', message: '', anonymous: true,
+    });
+    await fixture.whenStable();
+    const page = fixture.nativeElement as HTMLElement;
+    expect(page.querySelector('.featured-progress')?.textContent).toContain('15,000');
+    expect(page.querySelector('.featured-progress [role=progressbar]')?.getAttribute('aria-valuenow')).toBe('83');
   });
 
   it('calcula el total elegido y cambia la pestaña de mensajes', async () => {
@@ -81,12 +108,39 @@ describe('Flujos de demostración', () => {
     const fixture = TestBed.createComponent(Checkout);
     await fixture.whenStable();
     const page = fixture.nativeElement as HTMLElement;
-    const card = [...page.querySelectorAll('button')].find((button) => button.textContent?.trim() === 'Tarjeta')!;
+    const card = page.querySelector<HTMLInputElement>('input[type=radio][value=Tarjeta]')!;
     card.click();
     await fixture.whenStable();
     expect(fixture.componentInstance.method).toBe('Tarjeta');
     expect(page.textContent).toContain('No transfieras dinero');
     expect(page.querySelector('input[type=password]')).toBeNull();
+  });
+
+  it('guarda el método y el mensaje elegidos en la donación simulada', async () => {
+    const fixture = TestBed.createComponent(Checkout);
+    await fixture.whenStable();
+    const navigate = vi.spyOn(TestBed.inject(Router), 'navigate').mockResolvedValue(true);
+    const page = fixture.nativeElement as HTMLElement;
+    page.querySelector<HTMLInputElement>('input[type=radio][value=Tarjeta]')!.click();
+    page.querySelector<HTMLInputElement>('input[name=anonymous]')!.click();
+    const message = page.querySelector<HTMLTextAreaElement>('#support-message')!;
+    message.value = 'Mucho ánimo';
+    message.dispatchEvent(new Event('input'));
+    page.querySelector<HTMLButtonElement>('button[type=submit]')!.click();
+    await fixture.whenStable();
+    expect(TestBed.inject(DemoStore).donations()[0]).toMatchObject({
+      campaignId: 'anta', amount: 100, tip: 5, method: 'Tarjeta', message: 'Mucho ánimo', anonymous: true,
+    });
+    expect(navigate).toHaveBeenCalled();
+  });
+
+  it('explica un monto inválido y bloquea la confirmación', async () => {
+    TestBed.configureTestingModule({ providers: [provideRouter(routes)] });
+    const harness = await RouterTestingHarness.create();
+    await harness.navigateByUrl('/donar?campana=anta&monto=invalido&propina=5');
+    expect(harness.routeNativeElement?.textContent).toContain('El monto o el aporte voluntario no es válido');
+    expect(harness.routeNativeElement?.textContent).not.toContain('NaN');
+    expect(harness.routeNativeElement?.querySelector<HTMLButtonElement>('button[type=submit]')?.disabled).toBe(true);
   });
 
   it('limita el desembolso al saldo de la campaña y mantiene sus novedades separadas', () => {

@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { Checkout, Crear, Explorar, Historia, Panel } from './screens';
+import { Checkout, Crear, Historia, Panel } from './screens';
 import { CampaignDetail, CampaignWizard, DemoReceipt, Information } from './demo-pages';
 
 export const routes: Routes = [
-  { path: '', component: Explorar },
+  { path: '', loadComponent: () => import('./explorar').then((module) => module.Explorar) },
   { path: 'historia', component: Historia },
   { path: 'historia/:id', component: CampaignDetail },
   { path: 'donar', component: Checkout },
